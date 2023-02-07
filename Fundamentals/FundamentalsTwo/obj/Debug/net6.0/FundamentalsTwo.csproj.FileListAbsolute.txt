@@ -1,0 +1,15 @@
+C:\Users\mayla\OneDrive\Desktop\C#\Fundamentals\FundamentalsTwo\bin\Debug\net6.0\FundamentalsTwo.exe
+C:\Users\mayla\OneDrive\Desktop\C#\Fundamentals\FundamentalsTwo\bin\Debug\net6.0\FundamentalsTwo.deps.json
+C:\Users\mayla\OneDrive\Desktop\C#\Fundamentals\FundamentalsTwo\bin\Debug\net6.0\FundamentalsTwo.runtimeconfig.json
+C:\Users\mayla\OneDrive\Desktop\C#\Fundamentals\FundamentalsTwo\bin\Debug\net6.0\FundamentalsTwo.dll
+C:\Users\mayla\OneDrive\Desktop\C#\Fundamentals\FundamentalsTwo\bin\Debug\net6.0\FundamentalsTwo.pdb
+C:\Users\mayla\OneDrive\Desktop\C#\Fundamentals\FundamentalsTwo\obj\Debug\net6.0\FundamentalsTwo.csproj.AssemblyReference.cache
+C:\Users\mayla\OneDrive\Desktop\C#\Fundamentals\FundamentalsTwo\obj\Debug\net6.0\FundamentalsTwo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mayla\OneDrive\Desktop\C#\Fundamentals\FundamentalsTwo\obj\Debug\net6.0\FundamentalsTwo.AssemblyInfoInputs.cache
+C:\Users\mayla\OneDrive\Desktop\C#\Fundamentals\FundamentalsTwo\obj\Debug\net6.0\FundamentalsTwo.AssemblyInfo.cs
+C:\Users\mayla\OneDrive\Desktop\C#\Fundamentals\FundamentalsTwo\obj\Debug\net6.0\FundamentalsTwo.csproj.CoreCompileInputs.cache
+C:\Users\mayla\OneDrive\Desktop\C#\Fundamentals\FundamentalsTwo\obj\Debug\net6.0\FundamentalsTwo.dll
+C:\Users\mayla\OneDrive\Desktop\C#\Fundamentals\FundamentalsTwo\obj\Debug\net6.0\refint\FundamentalsTwo.dll
+C:\Users\mayla\OneDrive\Desktop\C#\Fundamentals\FundamentalsTwo\obj\Debug\net6.0\FundamentalsTwo.pdb
+C:\Users\mayla\OneDrive\Desktop\C#\Fundamentals\FundamentalsTwo\obj\Debug\net6.0\FundamentalsTwo.genruntimeconfig.cache
+C:\Users\mayla\OneDrive\Desktop\C#\Fundamentals\FundamentalsTwo\obj\Debug\net6.0\ref\FundamentalsTwo.dll
