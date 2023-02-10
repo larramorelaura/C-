@@ -1,0 +1,26 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+@model Survey
+<div >
+        <h1>Submitted Info</h1>
+        <div class="d-flex gap-2">
+            <p>Name:</p>
+            <p>@Model.Name</p>
+        </div>
+        <div class="d-flex gap-2">
+            <p>Dojo Location:</p>
+            <p>@Model.Location</p>
+        </div>
+        <div class="d-flex gap-2">
+            <p>Favorite Language</p>
+            <p>@Model.Language</p>
+        </div>
+        <div class="d-flex gap-2">
+            <p>Comment (optional):</p>
+            @if(Model.Comment==null)
+            {<p class="text-secondary">No Comment</p>}
+            else{<p>@Model.Comment</p>}
+        </div>
+    </div>
+    <a href="/"><button>Go Back</button></a>

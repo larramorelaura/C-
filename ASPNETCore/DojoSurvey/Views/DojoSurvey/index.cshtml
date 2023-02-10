@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Form</title>
+        <link rel="stylesheet" href="~/css/style.css"/>   
+    </head>
+    <body>
+        <div>
+            <form action="process" method="post">
+                <div>
+                    <label>Name:</label>
+                    <input type="text" name="TextName"/>
+                </div>
+                <div>
+                    <label>Dojo Location:</label>
+                    <select name="Location">
+                        <option value="San Jose">San Jose</option>
+                        <option value="Chicago">Chicago</option>
+                        <option value="New York">New York</option>
+                    </select>
+                </div>
+                <div>
+                <label>Favorite Language:</label>
+                    <select name="Language">
+                        <option value="C#">C#</option>
+                        <option value="Python">Python</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="Java">Java</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Comment(optional):</label>
+                    <textarea cols="50" rows="5" name="Comment"></textarea>
+                </div>
+                <input type="submit"/>
+            </form>
+        </div>
+    </body>
+    
+</html>

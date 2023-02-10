@@ -83,16 +83,17 @@ class SinglyLinkedList {
      *    or null when the end of the list has been reached.
      * @returns {SinglyLinkedList} This list.
      */
-    // insertAtBackRecursive(data, runner = this.head) {
-    //   if(this.isEmpty()){this.head= new ListNode(data)}
-    //   if(!(runner.next)){
-    //     break
-    //   }
-    //   if((runner.next)){
-    //     runner.next = new ListNode(data)
-    //   }
-    //   return this
-    // }
+    insertAtBackRecursive(data, runner = this.head) {
+      if(this.isEmpty()){
+        this.head= new ListNode(data); 
+        return this;
+      }
+      if(runner.next===null){
+        runner.next = new ListNode(data);
+        return this;
+      }
+      return this.insertAtBackRecursive(data, runner.next);
+    }
   
     /**
      * Calls insertAtBack on each item of the given array.

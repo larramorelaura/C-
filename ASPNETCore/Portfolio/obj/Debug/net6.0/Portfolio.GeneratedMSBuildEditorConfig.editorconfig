@@ -1,0 +1,24 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Portfolio
+build_property.RootNamespace = Portfolio
+build_property.ProjectDir = c:\Users\mayla\OneDrive\Desktop\C#\ASPNETCore\Portfolio\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = c:\Users\mayla\OneDrive\Desktop\C#\ASPNETCore\Portfolio
+build_property._RazorSourceGeneratorDebug = 
+
+[c:/Users/mayla/OneDrive/Desktop/C\#/ASPNETCore/Portfolio/Views/Portfolio/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9ydGZvbGlvXGluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/mayla/OneDrive/Desktop/C\#/ASPNETCore/Portfolio/Views/Portfolio/results.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9ydGZvbGlvXHJlc3VsdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
