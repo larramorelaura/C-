@@ -1,0 +1,54 @@
+@{
+    ViewData["Title"] = "Create A Dish";
+}
+@model Dish
+
+<div>
+    <div class="mx-auto p-5 text-center">
+        <h1>Add a Dish</h1>
+        <div class="d-flex gap-2 justify-content-center">
+            <a href="/dishes"><p>Home</p></a> 
+            <p> | </p>
+            <p>Add a Dish</p>
+        </div>
+    </div>
+    <form asp-action="Create" asp-controller="CRUDelicious" method="post">
+                <div class="row">
+                    <div class="col">
+                        <label>Chef's Name</label>
+                        <input asp-for="Chef"/>
+                    </div>
+                    <div class="col">
+                        <label>Tastiness</label>
+                        <Select asp-for="Tastiness">
+                            <Option value="1">1</Option>
+                            <Option value="2">2</Option>
+                            <Option value="3">3</Option>
+                            <Option value="4">4</Option>
+                            <Option value="5">5</Option>
+                        </Select>
+                    </div>
+                    <div class="col">
+                        <div class="">
+                            <label>Description</label>
+                            <textarea asp-for="Description" cols=50 rows=4></textarea>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label>Name of Dish</label>
+                        <input asp-for="Name"/>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col">
+                        <label># of Calories</label>
+                        <input asp-for="Calories"/>
+                    </div>
+                    
+                </div>
+                <input  type="submit" value="Add Dish">
+    </form>
+</div>

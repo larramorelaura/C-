@@ -1,0 +1,51 @@
+@{
+    ViewData["Title"] = "Add a Dish";
+}
+
+@model ViewModel
+<div class="text-backgrounds" p-5>
+    @await Html.PartialAsync("_NavLinks", new ChefsNDishes.Models.ViewModel{CurrentView="AddDish"})
+    <h1>Add a Dish</h1>
+    <form asp-action="AddDish" method="post" class="form px-5 mx-5">
+        <div class="mb-3 d-flex justify-content-between">
+            <label>Name of Dish:</label>
+            <input asp-for="Dish.Name">
+            
+        </div>
+        <span asp-validation-for="Dish.Name" class="text-danger"></span>
+        <div class="mb-3 d-flex justify-content-between">
+            <label># of Calories:</label>
+            <input asp-for="Dish.Calories">
+            
+        </div>
+        <span asp-validation-for="Dish.Calories" class="text-danger"></span>
+
+        <div class="mb-3 d-flex justify-content-between">
+            <label>Chef's Name:</label>
+            <select asp-for="Dish.UserId">
+                <option hidden> Select a chef</option>
+                @foreach(User? u in Model.AllChefs)
+                {
+                    <option value="@u.UserId">@u.FirstName</option>
+                }
+            </select>
+            
+        </div>
+        <span asp-validation-for="Dish.UserId" class="text-danger"></span>
+
+        <div class="mb-3 d-flex justify-content-between">
+            <label>Tastiness:</label>
+            <select asp-for="Dish.Tastiness">
+                <option hidden>Select Tastiness</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            
+        </div>
+        <span asp-validation-for="Dish.Tastiness" class="text-danger"></span>
+        <input class="bg-success text-white p-2" type="submit" value="Add Dish">
+    </form>
+</div>

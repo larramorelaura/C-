@@ -1,0 +1,31 @@
+@{
+    ViewData["Title"] = "Add a Chef";
+}
+
+@model User
+<div class="text-backgrounds">
+    @await Html.PartialAsync("_NavLinks", new ChefsNDishes.Models.ViewModel{CurrentView="AddChef"})
+    <h1>Add a Chef</h1>
+    <form asp-action="AddChef" method="post" class="form px-5">
+        <div class="mb-3 d-flex justify-content-between">
+            <label>First Name:</label>
+            <input asp-for="FirstName">
+            
+        </div>
+        <span asp-validation-for="FirstName" class="text-danger"></span>
+        <div class="mb-3 d-flex justify-content-between">
+            <label>Last Name:</label>
+            <input asp-for="LastName">
+            
+        </div>
+        <span asp-validation-for="LastName" class="text-danger"></span>
+
+        <div class="mb-3 d-flex justify-content-between">
+            <label>Date of Birth:</label>
+            <input asp-for="DOB">
+            
+        </div>
+        <span asp-validation-for="DOB" class="text-danger"></span>
+        <input class="bg-success text-white p-2" type="submit" value="Add Chef">
+    </form>
+</div>

@@ -1,0 +1,43 @@
+@{
+    ViewData["Title"] = "Your Dish";
+}
+
+@model Dish
+
+<div>
+    <div class="mx-auto p-5 text-center">
+        <h1>@Model.Name</h1>
+        <div class="d-flex gap-2 justify-content-center">
+            <a href="/dishes"><p>Home</p></a> 
+            <p> | </p>
+            <a href="/dishes/new"><p>Add a Dish</p></a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-head">
+            <p>@Model.Name by @Model.Chef</p>
+        </div>
+        
+        <div class="card-body">
+            
+            <div class="row">
+                <p class="font-weight-bold">@Model.Description</p>
+            </div>
+            <div class="row">
+                <p class="font-weight-bold">Calories: @Model.Calories</p>
+            </div>
+            <div class="row">
+                <p class="font-weight-bold">Tastiness: @Model.Tastiness</p>
+            </div>
+            <div class="row">
+                <form asp-action="Destroy" asp-controller="CRUDelicious" asp-route-id="@Model.DishId" method="post">
+                    <input type="submit" value="Delete">
+                </form>
+                <a href="/dishes/@(Model.DishId)/edit">
+                    <button type="submit">Edit</button>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</div>

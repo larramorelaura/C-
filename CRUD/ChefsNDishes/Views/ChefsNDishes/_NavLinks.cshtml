@@ -1,0 +1,20 @@
+
+
+@model ViewModel
+
+    <ul class="d-flex list-unstyled">
+        <li>
+            <a href="/chefs" class="@(Model.CurrentView == "Chefs" ? "disabled" : "")">Chefs</a> | 
+        </li>
+        <li>
+            <a href="/dishes" class="@(Model.CurrentView == "Dishes" ? "disabled" : "")">Dishes</a> | 
+        </li>
+
+        <li>
+            <a href="/chefs/new" class="@(Model.CurrentView == "AddChef" ? "disabled" : "")">Add a Chef</a> | 
+        </li>
+
+        <li>
+            <a href="/dishes/new" class="@(Model.CurrentView == "AddDish" ? "disabled" : "")">Add a Dish</a>
+        </li>
+    </ul>
