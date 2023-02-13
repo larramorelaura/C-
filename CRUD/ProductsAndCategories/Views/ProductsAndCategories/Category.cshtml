@@ -1,0 +1,38 @@
+@{
+    ViewData["Title"] = "Categories";
+}
+
+@model ViewModel
+<div class="text-center">
+    @await Html.PartialAsync("_NavLinks", new ViewModel{CurrentView="Category"})
+    <h1 class="text-center">@Model.Category.Name</h1>
+    <div class='d-flex gap-5'>
+        <div>
+            <h2>Products</h2>
+            @foreach(ProductAndCategory p in Model.Category.Products)
+            {
+                <div class="d-flex gap-2 justify-content-between">
+                    <p>@p.Product.Name</p>
+                    <form action="/products/categories/remove/@Model.Category.CategoryId/@p.ProductId" method="post">
+                        <button type="submit" class="btn btn-secondary">Remove</button>
+                    </form>
+                </div>
+
+            }
+        </div>
+        <div>
+            <h2>Add Product</h2>
+            <form asp-action="CreateLink" method="post">
+                <select asp-for="ProductAndCategory.ProductId">
+                    <option hidden>Select a product</option>
+                    @foreach (Product p in Model.AllProducts)
+                    {
+                        <option value="@p.ProductId">@p.Name</option>
+                    }
+                </select>
+                <input asp-for="ProductAndCategory.CategoryId" hidden value="@Model.Category.CategoryId"/>
+                <input type=submit value="Add"/>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Products";
+}
+
+@model ViewModel
+
+<div class="text-center">
+    @await Html.PartialAsync("_NavLinks", new ProductsAndCategories.Models.ViewModel{CurrentView="Products"})
+    <div class='d-flex'>
+        <div>
+            <h2>New Product</h2>
+            <form asp-action="CreateProduct" method="post">
+                <div>
+                    <label>Name:</label>
+                    <input asp-for="Product.Name"/>
+                </div>
+                <div>
+                    <label>Description:</label>
+                    <input asp-for="Product.Description"/>
+                </div>
+                <div>
+                    <label>Price:</label>
+                    <input asp-for="Product.Price"/>
+                </div>
+                <input type="submit" value="Create"/>
+            </form>
+        </div>
+        <div>
+            <h2>All Products</h2>
+            <ul class="list-unstyled text-right">
+                @foreach(Product p in Model.AllProducts)
+                {
+                    <a href="/products/@p.ProductId"><li >@p.Name</li></a>
+                }
+            </ul>
+        </div>
+    </div>
+</div>

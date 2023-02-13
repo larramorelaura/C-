@@ -1,0 +1,11 @@
+@model ViewModel
+
+    <ul class="d-flex list-unstyled">
+        <li>
+            <a href="/" class="@(Model.CurrentView == "Products" ? "disabled" : "")">Products</a> | 
+        </li>
+        <li>
+            <a href="/categories" class="@(Model.CurrentView == "Categories" ? "disabled" : "")">Categories</a> | 
+        </li>
+
+    </ul>

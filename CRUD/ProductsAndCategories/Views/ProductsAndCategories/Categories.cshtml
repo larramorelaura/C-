@@ -1,0 +1,29 @@
+@{
+    ViewData["Title"] = "Categories";
+}
+
+@model ViewModel
+
+<div >
+    @await Html.PartialAsync("_NavLinks", new ProductsAndCategories.Models.ViewModel{CurrentView="Categories"})
+    <div class='d-flex gap-5'>
+        <div>
+            <h2>New Category</h2>
+            <form asp-action="CreateCategory" method="post">
+                <label>Name:</label>
+                <input asp-for="Category.Name"/>
+                <span asp-validation-for="Category.Name" class="text-danger"></span>
+                <input type="submit" value="Create"/>
+            </form>
+        </div>
+        <div>
+            <h2>All Categories</h2>
+            <ul class="list-unstyled text-right">
+                @foreach(Category c in Model.AllCategories)
+                {
+                    <a href="/categories/@c.CategoryId"><li >@c.Name</li></a>
+                }
+            </ul>
+        </div>
+    </div>
+</div>
