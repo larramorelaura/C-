@@ -1,0 +1,21 @@
+
+@model Post
+
+<div>
+    <h1>Add a Post</h1>
+    <form asp-action="CreatePost">
+        <div>
+            <label asp-for="Topic"></label>
+            <input asp-for="Topic"/>
+        </div>
+        <div>
+            <label asp-for="Body"></label>
+            <input asp-for="Body"/>
+        </div>
+        <div>
+            <label asp-for="ImgUrl"></label>
+            <input asp-for="ImgUrl"/>
+        </div>
+        <input type="submit" value="Post"/>
+    </form>
+</div>

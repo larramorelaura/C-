@@ -1,0 +1,30 @@
+@{
+    ViewData["Title"] = "The Forum";
+}
+
+@model List<Post>
+
+    
+        
+        @foreach(Post p in Model)
+        {
+            <div class="card">
+                <div class="card-header">
+                    <h2>@p.Topic</h2>
+                </div>
+                <div class="card-body">
+                    <p>@p.Body</p>
+                    <img src="@p.ImgUrl" class="thumbnail"/>
+                    
+                </div>
+                <a asp-controller="Forum"
+                        asp-action="OnePost"
+                        asp-route-postId="@p.PostId"
+                    class="btn btn-outline-info" >View Details</a>
+                    <a asp-controller="Forum"
+                        asp-action="Edit"
+                        asp-route-postId="@p.PostId"
+                    class="btn btn-outline-info">Edit</a>
+            </div>
+        }
+    

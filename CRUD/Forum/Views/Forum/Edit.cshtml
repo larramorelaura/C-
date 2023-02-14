@@ -1,0 +1,24 @@
+@model Post
+
+<div>
+    <h1>Add a Post</h1>
+    <form 
+        asp-controller="Forum"
+        asp-action="Update"
+        asp-route-postId="@Model.PostId"
+            >
+        <div>
+            <label asp-for="Topic"></label>
+            <input asp-for="Topic" value="@Model.Topic"/>
+        </div>
+        <div>
+            <label asp-for="Body"></label>
+            <input asp-for="Body" value="@Model.Body"/>
+        </div>
+        <div>
+            <label asp-for="ImgUrl"></label>
+            <input asp-for="ImgUrl" value="@Model.ImgUrl"/>
+        </div>
+        <input type="submit" value="Post"/>
+    </form>
+</div>

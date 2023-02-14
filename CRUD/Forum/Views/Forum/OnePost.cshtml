@@ -1,0 +1,19 @@
+@model Post
+
+<div>
+    <div class="card">
+        <div class="card-header">
+            <h2>@Model.Topic</h2>
+        </div>
+        <div class="card-body">
+            <p>@Model.Body</p>
+            <img src="@Model.ImgUrl" class="thumbnail"/>
+            <form asp-controller="Forum"
+                asp-action="DeletePost"
+                asp-route-postId="@Model.PostId"
+                method="post">
+                <button class="submit">Delete</button>
+            </form>
+        </div>
+    </div>
+</div>

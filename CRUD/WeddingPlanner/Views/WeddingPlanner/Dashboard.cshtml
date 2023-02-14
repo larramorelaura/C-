@@ -1,0 +1,9 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+@model User
+    <div class="gap-5 d-flex">
+        <h1>Welcome @Model.FirstName</h1>
+        @await Html.PartialAsync("_NavLinks", new ViewModel{CurrentView="Dashboard"})
+        
+    </div>
