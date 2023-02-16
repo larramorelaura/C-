@@ -7,4 +7,5 @@ public class ViewModel
     public string CurrentView {get;set;}
     public User? User {get;set;}
 
+    public List<Wedding>? Weddings{get;set;}
 }

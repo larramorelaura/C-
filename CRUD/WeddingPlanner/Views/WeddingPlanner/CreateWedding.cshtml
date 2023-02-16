@@ -1,0 +1,31 @@
+
+@model Wedding
+
+<div>
+@await Html.PartialAsync("_NavLinks", new ViewModel{CurrentView="NewWedding"})
+</div>
+
+<form asp-controller="WeddingPlanner" asp-action="CreateWedding" asp-route-userId="@Context.Session.GetInt32("UserId")" method="post" >
+    <h1>Plan a Wedding</h1>
+    <div class="mb-3 d-flex justify-content-between">
+        <label asp-for="WedderOne"></label>
+        <input asp-for="WedderOne">
+    </div>
+    <span asp-validation-for="WedderOne" class="text-danger"></span>
+    <div class="mb-3 d-flex justify-content-between">
+        <label asp-for="WedderTwo"></label>
+        <input asp-for="WedderTwo">
+    </div>
+    <span asp-validation-for="WedderTwo" class="text-danger"></span>
+    <div class="mb-3 d-flex justify-content-between">
+        <label asp-for="WeddingDate"></label>
+        <input asp-for="WeddingDate">
+    </div>
+    <span asp-validation-for="WeddingDate" class="text-danger"></span>
+    <div class="mb-3 d-flex justify-content-between">
+        <label asp-for="Address"></label>
+        <input asp-for="Address">
+    </div>
+    <span asp-validation-for="Address" class="text-danger"></span>
+    <input class="bg-success text-white" type="submit" value="Create">
+</form>

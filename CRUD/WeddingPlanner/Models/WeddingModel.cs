@@ -7,7 +7,7 @@ namespace WeddingPlanner.Models;
 public class Wedding
 {
     [Key]
-    public int UserId { get; set; }
+    public int WeddingId { get; set; }
 
 
     [Required(ErrorMessage ="Wedder One is required")]

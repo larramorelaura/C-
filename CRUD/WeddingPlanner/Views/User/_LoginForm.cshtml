@@ -7,14 +7,14 @@
     <form asp-action="Login" method="post">
         <div class="mb-3 d-flex justify-content-between">
             <label>Email:</label>
-            <input asp-for="Email">
+            <input asp-for="LoginEmail">
         </div>
-        <span asp-validation-for="Email" class="text-danger"></span>
+        <span asp-validation-for="LoginEmail" class="text-danger"></span>
         <div class="mb-3 d-flex justify-content-between">
             <label>Password:</label>
-            <input asp-for="Password">
+            <input asp-for="LoginPassword">
         </div>
-        <span asp-validation-for="Password" class="text-danger"></span>
+        <span asp-validation-for="LoginPassword" class="text-danger"></span>
         <input class="bg-success text-white" type="submit" value="Login">
     </form>
 </div>

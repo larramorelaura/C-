@@ -1,0 +1,20 @@
+@{
+    ViewData["Title"] = "Wedding";
+}
+
+@model Wedding
+    <div>
+        @await Html.PartialAsync("_NavLinks", new ViewModel{CurrentView="OneWedding"})
+    </div>
+
+    <h1>@Model.WedderOne & @Model.WedderTwo Wedding</h1>
+    <p>Date: @Model.WeddingDate.ToString("MMM dd, yyyy")</p>
+    <div>
+        <h3>Guests</h3>
+        <ul class="border border-dark d-inline-block p-2 list-unstyled">
+        @foreach (GuestList g in @Model.Guests)
+        {
+            <li>@g.User.FirstName @g.User.LastName</li>
+        }
+        </ul>
+    </div>

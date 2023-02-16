@@ -1,5 +1,7 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc.Filters;
 using Forum.Models;
 
 namespace Forum.Controllers;
@@ -15,12 +17,19 @@ public class ForumController : Controller
         _context = context;    
     } 
 
-    [HttpGet("")]
+    // [HttpGet("")]
+    // public IActionResult Registration()
+    // {
+    //     return View("LoginAndRegistration");
+    // }
+    [SessionCheck]
+    [HttpGet("/posts/add")]
     public IActionResult NewPost()
     {
         return View("NewPost");
     }
 
+    
     [HttpPost("posts/new")]
     public IActionResult CreatePost(Post newPost)
     {
@@ -73,7 +82,7 @@ public class ForumController : Controller
         return RedirectToAction("OnePost", new{postId=postId});
     }
 
-
+    [SessionCheck]
     [HttpGet("posts/{postId}/edit")]
     public IActionResult Edit(int postId)
     {
@@ -83,7 +92,7 @@ public class ForumController : Controller
     }
 
 
-
+    [SessionCheck]
     [HttpGet("/posts/{postId}")]
     public IActionResult OnePost(int postId)
     {
@@ -95,10 +104,27 @@ public class ForumController : Controller
         return View("OnePost", post);
     }
 
+    [SessionCheck]
     [HttpGet("/posts")]
     public IActionResult AllPosts()
     {
         List<Post> allPosts = _context.Posts.ToList();
         return View("AllPosts", allPosts);
+    }
+}
+
+public class SessionCheckAttribute : ActionFilterAttribute
+{
+    public override void OnActionExecuting(ActionExecutingContext context)
+    {
+        // Find the session, but remember it may be null so we need int?
+        int? userId = context.HttpContext.Session.GetInt32("UserId");
+        // Check to see if we got back null
+        if(userId == null)
+        {
+            // Redirect to the Index page if there was nothing in session
+            // "Home" here is referring to "HomeController", you can use any controller that is appropriate here
+            context.Result = new RedirectToActionResult("Index", "Home", null);
+        }
     }
 }

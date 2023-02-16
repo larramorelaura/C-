@@ -1,9 +1,56 @@
 @{
     ViewData["Title"] = "Home Page";
 }
-@model User
-    <div class="gap-5 d-flex">
-        <h1>Welcome @Model.FirstName</h1>
+@model ViewModel
+    <div class="gap-5 d-flex justify-content-between">
+        <h1>Welcome @Model.User.FirstName</h1>
         @await Html.PartialAsync("_NavLinks", new ViewModel{CurrentView="Dashboard"})
         
     </div>
+    <table class="table table-striped">
+        <thead>
+            <th>Wedding Of</th>
+            <th>Date</th>
+            <th>Guest Count</th>
+            <th>Action</th>
+        </thead>
+        <tbody>
+            @foreach(Wedding w in Model.Weddings)
+            {
+                <tr>
+                    <td><a asp-controller="WeddingPlanner" asp-action="OneWedding" asp-route-id="@w.WeddingId">@w.WedderOne & @w.WedderTwo</a></td>
+                    <td>@w.WeddingDate</td>
+                    <td>@w.Guests.Count</td>
+                    <td>
+                        @if(@Context.Session.GetInt32("UserId")==w.Creator.UserId)
+                        {
+                            <form asp-controller="WeddingPlanner" asp-action="DeleteWedding" asp-route-weddingId="@w.WeddingId">
+                                <button>Delete</button>
+                            </form>
+                        }
+                        else if(w.Guests.Any(g=>g.UserId==@Context.Session.GetInt32("UserId")))
+                        {
+                            <form asp-controller="WeddingPlanner" 
+                                asp-action="RemoveGuest" 
+                                asp-route-userId="@Context.Session.GetInt32("UserId")" 
+                                asp-route-weddingId="@w.WeddingId">
+                                <button>Un-RSVP</button>
+                            </form>
+                        }
+                        else
+                        {
+                            <form asp-controller="WeddingPlanner" 
+                                asp-action="CreateGuest" 
+                                asp-route-userId="@Context.Session.GetInt32("UserId")" 
+                                asp-route-weddingId="@w.WeddingId">
+                                <button>RSVP</button>
+                            </form>
+                        }
+                        @* @if()
+                        <button>RSVP</button>
+                        <button>Un-RSVP</button> *@
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>

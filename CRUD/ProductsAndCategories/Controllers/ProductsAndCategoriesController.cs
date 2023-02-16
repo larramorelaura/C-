@@ -153,7 +153,7 @@ public class ProductsAndCategoriesController : Controller
     [HttpPost("/products/categories/remove/{categoryId}/{productId}")]
     public IActionResult DestroyLink(int categoryId, int productId)
     {
-        ProductAndCategory toDelete= _context.ProductsAndCategories.FirstOrDefault(pc=>pc.CategoryId.Equals(categoryId) && pc.ProductId.Equals(productId));
+        ProductAndCategory? toDelete= _context.ProductsAndCategories.FirstOrDefault(pc=>pc.CategoryId.Equals(categoryId) && pc.ProductId.Equals(productId));
         Console.WriteLine(toDelete.ProductAndCategoryId);
         if (toDelete is not null) {
         _context.ProductsAndCategories.Remove(toDelete);

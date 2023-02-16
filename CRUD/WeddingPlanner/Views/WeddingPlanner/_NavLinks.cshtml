@@ -4,13 +4,13 @@
     
     <ul class="d-flex list-unstyled">
         <li>
-            <a href="/dashboard/{id}" class="@(Model.CurrentView == "Dashboard" ? "disabled" : "")">Home</a> | 
+            <a asp-controller="WeddingPlanner" asp-action="Dashboard" asp-route-id="@Context.Session.GetInt32("UserId")" class="@(Model.CurrentView == "Dashboard" ? "disabled" : "")">Home</a> | 
         </li>
         <li>
-            <a href="/weddings/new" class="@(Model.CurrentView == "NewWedding" ? "disabled" : "")">Plan a Wedding</a> | 
+            <a href="/weddings/new" class="@(Model.CurrentView == "NewWedding" ? "disabled" : "")"> Plan a Wedding</a> | 
         </li>
         <li>
-            <a asp-controller="WeddingPlanner" asp-action="Logout">Logout</a>
+            <form asp-controller="User" asp-action="Logout" method="post"><button type="submit" class="btn text-primary btn-link p-0"> Logout</button></form>
         </li>
     </ul>
     
