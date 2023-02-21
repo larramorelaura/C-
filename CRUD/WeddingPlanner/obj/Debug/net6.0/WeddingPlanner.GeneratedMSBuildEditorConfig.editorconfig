@@ -8,61 +8,61 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WeddingPlanner
 build_property.RootNamespace = WeddingPlanner
-build_property.ProjectDir = c:\Users\mayla\OneDrive\Desktop\C#\CRUD\WeddingPlanner\
+build_property.ProjectDir = C:\Users\mayla\OneDrive\Desktop\C#\CRUD\WeddingPlanner\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = c:\Users\mayla\OneDrive\Desktop\C#\CRUD\WeddingPlanner
+build_property.MSBuildProjectDirectory = C:\Users\mayla\OneDrive\Desktop\C#\CRUD\WeddingPlanner
 build_property._RazorSourceGeneratorDebug = 
 
-[c:/Users/mayla/OneDrive/Desktop/C\#/CRUD/WeddingPlanner/Views/Shared/Error.cshtml]
+[C:/Users/mayla/OneDrive/Desktop/C\#/CRUD/WeddingPlanner/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/mayla/OneDrive/Desktop/C\#/CRUD/WeddingPlanner/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/mayla/OneDrive/Desktop/C\#/CRUD/WeddingPlanner/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/mayla/OneDrive/Desktop/C\#/CRUD/WeddingPlanner/Views/User/Index.cshtml]
+[C:/Users/mayla/OneDrive/Desktop/C\#/CRUD/WeddingPlanner/Views/User/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/mayla/OneDrive/Desktop/C\#/CRUD/WeddingPlanner/Views/User/_LoginForm.cshtml]
+[C:/Users/mayla/OneDrive/Desktop/C\#/CRUD/WeddingPlanner/Views/User/_LoginForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxfTG9naW5Gb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/mayla/OneDrive/Desktop/C\#/CRUD/WeddingPlanner/Views/User/_RegistrationForm.cshtml]
+[C:/Users/mayla/OneDrive/Desktop/C\#/CRUD/WeddingPlanner/Views/User/_RegistrationForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxfUmVnaXN0cmF0aW9uRm9ybS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/mayla/OneDrive/Desktop/C\#/CRUD/WeddingPlanner/Views/WeddingPlanner/CreateWedding.cshtml]
+[C:/Users/mayla/OneDrive/Desktop/C\#/CRUD/WeddingPlanner/Views/WeddingPlanner/CreateWedding.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2VkZGluZ1BsYW5uZXJcQ3JlYXRlV2VkZGluZy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/mayla/OneDrive/Desktop/C\#/CRUD/WeddingPlanner/Views/WeddingPlanner/Dashboard.cshtml]
+[C:/Users/mayla/OneDrive/Desktop/C\#/CRUD/WeddingPlanner/Views/WeddingPlanner/Dashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2VkZGluZ1BsYW5uZXJcRGFzaGJvYXJkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/mayla/OneDrive/Desktop/C\#/CRUD/WeddingPlanner/Views/WeddingPlanner/OneWedding.cshtml]
+[C:/Users/mayla/OneDrive/Desktop/C\#/CRUD/WeddingPlanner/Views/WeddingPlanner/OneWedding.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2VkZGluZ1BsYW5uZXJcT25lV2VkZGluZy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/mayla/OneDrive/Desktop/C\#/CRUD/WeddingPlanner/Views/WeddingPlanner/Privacy.cshtml]
+[C:/Users/mayla/OneDrive/Desktop/C\#/CRUD/WeddingPlanner/Views/WeddingPlanner/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2VkZGluZ1BsYW5uZXJcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/mayla/OneDrive/Desktop/C\#/CRUD/WeddingPlanner/Views/WeddingPlanner/_NavLinks.cshtml]
+[C:/Users/mayla/OneDrive/Desktop/C\#/CRUD/WeddingPlanner/Views/WeddingPlanner/_NavLinks.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2VkZGluZ1BsYW5uZXJcX05hdkxpbmtzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/mayla/OneDrive/Desktop/C\#/CRUD/WeddingPlanner/Views/_ViewImports.cshtml]
+[C:/Users/mayla/OneDrive/Desktop/C\#/CRUD/WeddingPlanner/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/mayla/OneDrive/Desktop/C\#/CRUD/WeddingPlanner/Views/_ViewStart.cshtml]
+[C:/Users/mayla/OneDrive/Desktop/C\#/CRUD/WeddingPlanner/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/mayla/OneDrive/Desktop/C\#/CRUD/WeddingPlanner/Views/Shared/_Layout.cshtml]
+[C:/Users/mayla/OneDrive/Desktop/C\#/CRUD/WeddingPlanner/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-l8pyi8tiun
