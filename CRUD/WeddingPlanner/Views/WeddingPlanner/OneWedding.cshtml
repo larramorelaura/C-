@@ -8,7 +8,9 @@
     </div>
 
     <h1>@Model.WedderOne & @Model.WedderTwo Wedding</h1>
-    <p>Date: @Model.WeddingDate.ToString("MMM dd, yyyy")</p>
+    <p>Date: @{DateTime weddingDate= (DateTime)Model.WeddingDate;
+                weddingDate.ToString("MMM dd yyyy");
+        }</p>
     <div>
         <h3>Guests</h3>
         <ul class="border border-dark d-inline-block p-2 list-unstyled">

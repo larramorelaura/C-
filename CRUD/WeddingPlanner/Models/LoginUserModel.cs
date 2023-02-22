@@ -2,13 +2,17 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 namespace WeddingPlanner.Models;
+
+[NotMapped]
 public class LoginUser
 {
-    [NotMapped]
-    [Required]    
+    
+    [Required] 
+    [Display(Name ="Email")]   
     public string LoginEmail { get; set; }    
-    [NotMapped]
+    
     [Required]  
-    [DataType(DataType.Password)]  
+    [DataType(DataType.Password)]
+    [Display(Name ="Password")]  
     public string LoginPassword { get; set; } 
 }

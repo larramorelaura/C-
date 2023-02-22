@@ -5,7 +5,7 @@
 @await Html.PartialAsync("_NavLinks", new ViewModel{CurrentView="NewWedding"})
 </div>
 
-<form asp-controller="WeddingPlanner" asp-action="CreateWedding" asp-route-userId="@Context.Session.GetInt32("UserId")" method="post" >
+<form asp-controller="WeddingPlanner" asp-action="CreateWedding" method="post" >
     <h1>Plan a Wedding</h1>
     <div class="mb-3 d-flex justify-content-between">
         <label asp-for="WedderOne"></label>

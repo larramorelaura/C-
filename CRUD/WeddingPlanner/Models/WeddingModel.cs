@@ -24,7 +24,7 @@ public class Wedding
     [Required(ErrorMessage = "Wedding Date is required")]
     [Display(Name = "Wedding Date")]
     [FutureDate(ErrorMessage = "Wedding Date must be in the future")]
-    public DateTime WeddingDate{get;set;}
+    public DateTime? WeddingDate{get;set;}
 
     [Required(ErrorMessage ="Address is required")]
     public string Address{get;set;}

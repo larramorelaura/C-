@@ -32,7 +32,6 @@
                         {
                             <form asp-controller="WeddingPlanner" 
                                 asp-action="RemoveGuest" 
-                                asp-route-userId="@Context.Session.GetInt32("UserId")" 
                                 asp-route-weddingId="@w.WeddingId">
                                 <button>Un-RSVP</button>
                             </form>
@@ -41,7 +40,6 @@
                         {
                             <form asp-controller="WeddingPlanner" 
                                 asp-action="CreateGuest" 
-                                asp-route-userId="@Context.Session.GetInt32("UserId")" 
                                 asp-route-weddingId="@w.WeddingId">
                                 <button>RSVP</button>
                             </form>

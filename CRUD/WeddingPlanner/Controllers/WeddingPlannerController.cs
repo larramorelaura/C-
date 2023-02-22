@@ -48,9 +48,13 @@ public class WeddingPlannerController : Controller
         return View("OneWedding", OneWedding);
     }
 
-    [HttpPost("weddings/create/{userId}")]
-    public IActionResult CreateWedding(Wedding newWedding, int userId)
+    [SessionCheck]
+    [HttpPost("weddings/create")]
+    public IActionResult CreateWedding(Wedding newWedding)
     {
+
+        int? userId= HttpContext.Session.GetInt32("UserId");
+
         if(!ModelState.IsValid)
         {
             return View("CreateWedding");
@@ -64,10 +68,13 @@ public class WeddingPlannerController : Controller
         return RedirectToAction("OneWedding", new{id=newWedding.WeddingId});
     }
 
-    [HttpPost("weddings/guests/create/{userId}/{weddingId}")]
-    public IActionResult CreateGuest(int userId, int weddingId)
+    [SessionCheck]
+    [HttpPost("weddings/guests/create/{weddingId}")]
+    public IActionResult CreateGuest(int weddingId)
 
     {
+        int userId= (int)HttpContext.Session.GetInt32("UserId");
+
         if(!ModelState.IsValid)
         {
         return Dashboard(userId);
@@ -90,10 +97,12 @@ public class WeddingPlannerController : Controller
         return View("Dashboard", new{id=userId});
     }
 
-    [HttpPost("weddings/guests/remove/{userId}/{weddingId}")]
-    public IActionResult RemoveGuest(int userId, int weddingId)
-
+    [SessionCheck]
+    [HttpPost("weddings/guests/remove/{weddingId}")]
+    public IActionResult RemoveGuest(int weddingId)
     {
+    int userId= (int)HttpContext.Session.GetInt32("UserId");
+    
         if(!ModelState.IsValid)
         {
         return Dashboard(userId);
@@ -109,6 +118,8 @@ public class WeddingPlannerController : Controller
         return RedirectToAction("Dashboard", new{id=userId}); 
     }
 
+
+    [SessionCheck]
     [HttpPost("weddings/destroy/{weddingId}")]
     public IActionResult DeleteWedding(int weddingId)
     {
@@ -118,7 +129,7 @@ public class WeddingPlannerController : Controller
             _context.Weddings.Remove(ToDelete);
             _context.SaveChanges();
         }
-        int userId= HttpContext.Session.GetInt32("UserId")?? 0;
+        int userId= (int)HttpContext.Session.GetInt32("UserId");
         return RedirectToAction("Dashboard", new{id=userId});
     }
 }

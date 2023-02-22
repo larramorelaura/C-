@@ -6,12 +6,12 @@
     <h1>Login</h1>
     <form asp-action="Login" method="post">
         <div class="mb-3 d-flex justify-content-between">
-            <label>Email:</label>
+            <label asp-for="LoginEmail"></label>
             <input asp-for="LoginEmail">
         </div>
         <span asp-validation-for="LoginEmail" class="text-danger"></span>
         <div class="mb-3 d-flex justify-content-between">
-            <label>Password:</label>
+            <label asp-for="LoginPassword"></label>
             <input asp-for="LoginPassword">
         </div>
         <span asp-validation-for="LoginPassword" class="text-danger"></span>
