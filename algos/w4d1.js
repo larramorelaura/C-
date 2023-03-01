@@ -97,3 +97,5 @@ console.log(unorderedList.pop());
 console.log(unorderedList.peek());
 console.log(unorderedList.push(5));
 console.log(unorderedList.push(7));
+
+module.exports = { Stack };
